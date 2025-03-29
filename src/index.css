@@ -1,1 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata:wght@400&family=Josefin+Sans:wght@300&display=swap");
 @import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-alata: "Alata", sans-serif;
+  --font-josefin-sans: "Josefin Sans", sans-serif;
+  /* Colors */
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-black: hsla(0, 0%, 0%, 1);
+  --color-primary-dark-gray: hsl(0, 0%, 55%);
+  --color-primary-very-dark-gray: hsl(0, 0%, 41%);
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply font-alata font-normal;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-josefin-sans font-light;
+  }
+  h2 {
+    @apply uppercase text-black text-3xl leading-8 text-center px-4 py-8;
+  }
+  h3 {
+    @apply absolute  text-white text-2xl leading-6 font-josefin-sans font-light uppercase;
+  }
+  header {
+    background-image: url(./assets/images/mobile/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  nav li a {
+    @apply text-[15px] font-alata leading-6;
+  }
+  .image-grid-container{
+    @apply grid grid-cols-1 gap-4;
+  }
+  .cards-container{
+    @apply grid grid-cols-1 gap-8;
+  }
+  .card {
+    @apply relative w-full h-full;
+  }
+  .card h3 {
+    @apply absolute bottom-0 left-0 p-4 w-40 inline-block;
+  }
+  footer{
+    @apply bg-black text-white flex flex-col gap-8 items-center justify-center text-center p-12;
+
+  }
+  footer ul {
+    @apply list-none mt-4;
+    li {
+      @apply font-alata font-normal text-[15px] leading-6 text-white py-2;
+    }
+  }
+  .social-icons{
+    @apply flex justify-center items-center gap-4;
+  }
+  footer p{
+    @apply font-alata font-normal text-[15px] leading-6 text-white opacity-50;
+  }
+
+}

@@ -9,6 +9,11 @@ import fromAbove from "./assets/images/mobile/image-from-above.jpg";
 import pocketBorealis from "./assets/images/mobile/image-pocket-borealis.jpg";
 import curiosity from "./assets/images/mobile/image-curiosity.jpg";
 import fisheye from "./assets/images/mobile/image-fisheye.jpg";
+import facebookIcon from "./assets/images/icon-facebook.svg";
+import twitterIcon from "./assets/images/icon-twitter.svg";
+import pinterestIcon from "./assets/images/icon-pinterest.svg";
+import instagramIcon from "./assets/images/icon-instagram.svg";
+
 const App = () => {
   return (
     <>
@@ -55,7 +60,7 @@ const App = () => {
         </section>
         <section className="image-grid-container">
           <h2>Our creations</h2>
-          <button className="btn"> See all </button>
+          <button className="btn order-last m-auto "> See all </button>
           <div className="cards-container">
             <div className="card">
               <img className="" src={deepEarth} alt="half globe image" />
@@ -114,7 +119,20 @@ const App = () => {
           </ul>
         </div>
         <div>
-          <div className="social-icons">
+          <div className="social-icons mt-6 mb-4">
+          <a href="#" aria-label="Facebook">
+              <img className="" src={facebookIcon} alt="Facebook" />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <img className="" src={twitterIcon} alt="Twitter" />
+            </a>
+            <a href="#" aria-label="Pinterest">
+              <img className="" src={pinterestIcon} alt="Pinterest" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img className="" src={instagramIcon} alt="Instagram" />
+
+            </a>
           </div>
           <p> © 2021 Loopstudios. All rights reserved.</p>
         </div>

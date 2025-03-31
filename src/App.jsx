@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import menuIcon from "./assets/images/icon-hamburger.svg";
 import logo from "./assets/images/logo.svg";
 import interactiveVR from "./assets/images/mobile/image-interactive.jpg";
@@ -13,14 +15,20 @@ import facebookIcon from "./assets/images/icon-facebook.svg";
 import twitterIcon from "./assets/images/icon-twitter.svg";
 import pinterestIcon from "./assets/images/icon-pinterest.svg";
 import instagramIcon from "./assets/images/icon-instagram.svg";
+import closeIcon from "./assets/images/icon-close.svg";
 
 const App = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
   return (
     <>
       <header className="relative flex flex-col justify-between w-full text-white p-4">
         <nav className="flex justify-between items-center py-8 px-2">
-          <img className="" src={logo} alt="Logo" />
-          <img className="menu md:hidden" src={menuIcon} alt="menu Icon" />
+          <img className="h-8" src={logo} alt="Loopstudios Logo" />
+
+          {/* Desktop Navigation */}
           <ul className="hidden md:flex md:justify-between md:items-center md:gap-4">
             <li>
               <a href="#">About</a>
@@ -38,7 +46,76 @@ const App = () => {
               <a href="#">Support</a>
             </li>
           </ul>
+
+          {/* Mobile Menu Icon */}
+          <img
+            className="menu md:hidden"
+            src={menuIcon}
+            alt="Menu Icon"
+            onClick={toggleMenu}
+          />
+
+          {/* Mobile Navigation */}
+          {showMenu && (
+            <div className="fixed top-0 left-0 w-full h-screen bg-black z-50 flex flex-col p-6">
+              {/* Logo & Close Icon in Mobile Menu */}
+              <div className="flex justify-between items-center w-full py-8 px-2">
+                <img className="h-8" src={logo} alt="Loopstudios Logo" />
+                <img
+                  className="h-6 cursor-pointer"
+                  src={closeIcon}
+                  alt="Close Icon"
+                  onClick={toggleMenu}
+                />
+              </div>
+
+              {/* Mobile Navigation Links */}
+              <ul className="absolute top-1/2 left-6 transform -translate-y-1/2 flex flex-col gap-6 mt-16 text-left">
+                <li className="">
+                  <a
+                    href="#"
+                    className="font-josefin-sans font-light text-white text-2xl leading-6 uppercase "
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="font-josefin-sans font-light text-white text-2xl leading-6 uppercase "
+                  >
+                    Carrers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="font-josefin-sans font-light text-white text-2xl leading-6 uppercase "
+                  >
+                    Events
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="font-josefin-sans font-light text-white text-2xl leading-6 uppercase "
+                  >
+                    Products
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="font-josefin-sans font-light text-white text-2xl leading-6 uppercase "
+                  >
+                    support
+                  </a>
+                </li>
+              </ul>
+            </div>
+          )}
         </nav>
+        {/* Hero Section */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center w-[90%] border-2 p-4">
           <h1 className="font-josefin uppercase text-5xl leading-10 p-4 text-left">
             Immersive experiences that deliver
@@ -120,7 +197,7 @@ const App = () => {
         </div>
         <div>
           <div className="social-icons mt-6 mb-4">
-          <a href="#" aria-label="Facebook">
+            <a href="#" aria-label="Facebook">
               <img className="" src={facebookIcon} alt="Facebook" />
             </a>
             <a href="#" aria-label="Twitter">
@@ -131,7 +208,6 @@ const App = () => {
             </a>
             <a href="#" aria-label="Instagram">
               <img className="" src={instagramIcon} alt="Instagram" />
-
             </a>
           </div>
           <p> © 2021 Loopstudios. All rights reserved.</p>

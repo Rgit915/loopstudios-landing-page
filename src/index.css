@@ -35,18 +35,23 @@
   h3 {
     @apply absolute  text-white text-2xl leading-6 font-josefin-sans font-light uppercase;
   }
-  header {
-    background-image: url(./assets/images/mobile/image-hero.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
+  
   nav li a {
-    @apply text-[15px] font-alata leading-6;
+    @apply text-[15px] font-alata leading-6 relative;
   }
+
+  nav li a::after {
+    content: "";
+    @apply absolute bottom-[-8px] w-0 h-[2px] bg-white transition-all duration-300;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  nav li a:hover::after {
+    @apply w-[50%];
+  }
+
+
   .image-grid-container{
     @apply grid grid-cols-1 gap-10 mb-12 ;
   }

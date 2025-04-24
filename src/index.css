@@ -71,11 +71,14 @@
     @apply relative inline-block my-12 px-12 py-4 uppercase font-alata font-normal text-sm leading-3.5 tracking-[5px] text-black border-2 border-primary-dark-gray hover:text-white hover:bg-black ;
   }
   footer{
-    @apply bg-black text-white flex flex-col gap-8 items-center justify-center text-center p-12;
+    @apply bg-black text-white flex flex-col gap-8 items-center justify-center text-center p-12 md:flex-row md:justify-between;
 
   }
+  footer > div:first-child {
+    @apply md:flex md:flex-col md:items-start
+  }
   footer ul {
-    @apply list-none mt-4;
+    @apply list-none mt-4 md:flex md:gap-4;
     li {
       @apply font-alata font-normal text-[15px] leading-6 text-white py-2;
     }
@@ -86,5 +89,20 @@
   footer p{
     @apply font-alata font-normal text-[15px] leading-6 text-white opacity-50;
   }
-
+  footer a{
+    @apply relative;
+  }
+  footer a::after {
+    content: "";
+    @apply absolute bottom-[-8px] h-[2px] bg-white transition-all duration-300;
+    left: 50%;
+    width: 0;
+    transform: translateX(-50%);
+  }
+  footer a:hover::after {
+    @apply w-[50%];
+  }
+  .social-icons a:hover::after {
+    @apply w-full;
+  }
 }

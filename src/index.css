@@ -35,7 +35,7 @@
   h3 {
     @apply absolute  text-white text-2xl leading-6 font-josefin-sans font-light uppercase;
   }
-  
+
   nav li a {
     @apply text-[15px] font-alata leading-6 relative;
   }
@@ -59,13 +59,16 @@
     @apply grid grid-cols-1 gap-8;
   }
   .card {
-    @apply relative w-full h-full;
+    @apply relative w-full h-full cursor-pointer;
+  }
+  .card img{
+    @apply w-full transition-opacity duration-300 group-hover:opacity-50;
   }
   .card h3 {
-    @apply absolute bottom-0 left-0 p-4 w-40 inline-block;
+    @apply absolute bottom-0 left-0 p-4 w-40 inline-block transition-colors duration-300 group-hover:text-black;
   }
   .btn{
-    @apply relative inline-block my-12 px-12 py-4 uppercase font-alata font-normal text-sm leading-3.5 tracking-[5px] text-black border-2 border-primary-dark-gray;
+    @apply relative inline-block my-12 px-12 py-4 uppercase font-alata font-normal text-sm leading-3.5 tracking-[5px] text-black border-2 border-primary-dark-gray hover:text-white hover:bg-black ;
   }
   footer{
     @apply bg-black text-white flex flex-col gap-8 items-center justify-center text-center p-12;

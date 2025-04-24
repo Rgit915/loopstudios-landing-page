@@ -159,10 +159,14 @@ const App = () => {
           </article>
         </section>
         <section className="image-grid-container">
+          <div className="hidden w-full md:flex md:justify-between md:items-center">
           <h2>Our creations</h2>
-          <button className="btn order-last m-auto"> See all </button>
-          <div className="cards-container grid grid-cols-4">
-            <div className="card">
+          <button className="btn"> See all </button>
+          </div>
+          <h2 className="md:hidden">Our creations</h2>
+          <button className="btn order-last m-auto md:hidden"> See all </button>
+          <div className="cards-container grid md:grid-cols-4">
+            <div className="card group">
               <picture>
                 <source media="(min-width: 768px)" srcSet={deepEarthDesktop} />
                 <img className="" src={deepEarth} alt="half globe image" />
@@ -170,7 +174,7 @@ const App = () => {
               <h3> Deep earth </h3>
             </div>
 
-            <div className="card">
+            <div className="card group">
               <picture>
                 <source
                   media="(min-width: 768px)"
@@ -180,28 +184,28 @@ const App = () => {
               </picture>
               <h3>Night arcade </h3>
             </div>
-            <div className="card">
+            <div className="card group">
               <picture>
                 <source media="(min-width: 768px)" srcSet={soccerTeamDesktop} />
                 <img className="" src={soccerTeam} alt="soccer player image" />
               </picture>
               <h3>Soccer team VR </h3>
             </div>
-            <div className="card">
+            <div className="card group">
               <picture>
                 <source media="(min-width: 768px)" srcSet={gridDesktop} />
                 <img className="" src={grid} alt="car wheel image" />
               </picture>
               <h3>The grid </h3>
             </div>
-            <div className="card">
+            <div className="card group">
               <picture>
                 <source media="(min-width: 768px)" srcSet={fromAboveDesktop} />
                 <img className="" src={fromAbove} alt="from above VR image" />
               </picture>
               <h3>From up above VR </h3>
             </div>
-            <div className="card">
+            <div className="card group">
               <picture>
                 <source
                   media="(min-width: 768px)"
@@ -211,14 +215,14 @@ const App = () => {
               </picture>
               <h3>Pocket borealis </h3>
             </div>
-            <div className="card">
+            <div className="card group">
               <picture>
                 <source media="(min-width: 768px)" srcSet={curiosityDesktop} />
                 <img className="" src={curiosity} alt="" />
               </picture>
               <h3>The curiosity </h3>
             </div>
-            <div className="card">
+            <div className="card group">
               <picture>
                 <source media="(min-width: 768px)" srcSet={fisheyeDesktop} />
                 <img className="" src={fisheye} alt="" />

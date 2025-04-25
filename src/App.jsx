@@ -33,8 +33,8 @@ const App = () => {
   };
   return (
     <>
-      <header className="relative flex flex-col justify-between w-full text-white p-4 bg-[url('./assets/images/mobile/image-hero.jpg')] bg-center bg-cover bg-no-repeat h-screen text-center md:bg-[url('./assets/images/desktop/image-hero.jpg')] md:px-12">
-        <nav className="flex justify-between items-center py-8 px-2">
+      <header className="relative flex flex-col justify-between w-full text-white p-4 bg-[url('./assets/images/mobile/image-hero.jpg')] bg-center bg-cover bg-no-repeat h-screen text-center md:bg-[url('./assets/images/desktop/image-hero.jpg')] md:px-12 md:items-start">
+        <nav className="w-full flex justify-between items-center py-8 px-2">
           <img className="h-8" src={logo} alt="Loopstudios Logo" />
 
           {/* Desktop Navigation */}
@@ -125,13 +125,13 @@ const App = () => {
           )}
         </nav>
         {/* Hero Section */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center w-[90%] border-2 p-4 md:w-[80%] md:p-12 md:left-0 md:translate-x-0 lg:w-[60%]">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center w-[90%] border-2 p-4 md:w-[80%] md:p-12  md:transform-none md:top-1/2 lg:left-[34%] lg:w-[60%]">
           <h1 className="font-josefin uppercase text-5xl leading-10 p-4 text-left md:text-7xl xl:text-8xl md:leading-[1.2] md:p-0">
             Immersive experiences that deliver
           </h1>
         </div>
       </header>
-      <main className="container flex flex-col justify-center items-center p-6 gap-8 mt-12">
+      <main className=" overflow-x-hidden flex flex-col justify-center items-center p-6 gap-8 mt-12">
         <section className="interactive-vr relative flex flex-col md:flex-row">
           {/* Mobile Image */}
           <img

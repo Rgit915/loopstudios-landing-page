@@ -49,7 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-- How to use the <picture> element with source and media attributes to implement responsive images.
+- How to use the `<picture>` element with source and media attributes to implement responsive images.
 - Using Tailwind’s group utility to coordinate hover effects between parent and child elements. When you add group to a parent element, you can target its children with group-hover:
 ```html
 <div className="card group relative">

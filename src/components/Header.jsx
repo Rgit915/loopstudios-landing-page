@@ -14,7 +14,10 @@ export default function Header() {
 
   return (
     <header className="relative flex flex-col justify-between w-full text-white p-4 bg-[url('./assets/images/mobile/image-hero.jpg')] bg-center bg-cover bg-no-repeat h-screen text-center md:bg-[url('./assets/images/desktop/image-hero.jpg')] md:px-12 md:items-start">
-      <nav className="w-full flex justify-between items-center py-8 px-2">
+      <nav
+        className="w-full flex justify-between items-center py-8 px-2"
+        aria-label="Main navigation"
+      >
         <img src={logo} alt="Loopstudios Logo" />
         <ul className="hidden md:flex md:justify-between md:items-center md:gap-4">
           {links.map((link) => (
@@ -23,13 +26,15 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        {/* Mobile Menu Icon */}
-        <img
-          className="menu md:hidden"
-          src={menuIcon}
-          alt="Menu Icon"
+        {/* Mobile Menu Button */}
+        <button
+          className="menu md:hidden cursor-pointer"
           onClick={toggleMenu}
-        />
+          aria-expanded={showMenu}
+          aria-controls="mobile-menu"
+        >
+          <img src={menuIcon} alt="Open menu" />
+        </button>
 
         {/* Mobile Navigation */}
         {showMenu && (
@@ -37,12 +42,9 @@ export default function Header() {
             {/* Logo & Close Icon in Mobile Menu */}
             <div className="flex justify-between items-center w-full py-8 px-2">
               <img className="h-8" src={logo} alt="Loopstudios Logo" />
-              <img
-                className="h-6 cursor-pointer"
-                src={closeIcon}
-                alt="Close Icon"
-                onClick={toggleMenu}
-              />
+              <button onClick={toggleMenu} aria-label="Close menu">
+                <img className="h-6 cursor-pointer" src={closeIcon} alt="Close icon" />
+              </button>
             </div>
 
             {/* Mobile Navigation Links */}

@@ -11,7 +11,8 @@ export default function Footer() {
     <footer>
       <div>
         <img src={logo} alt="Loopstudios Logo" className="mx-auto md:mx-0" />
-        <ul className="flex flex-col md:flex-row gap-4 md:gap-8">
+        <nav aria-label="Footer navigation">
+          <ul className="flex flex-col md:flex-row gap-4 md:gap-8">
           {links.map((link) => (
             <li key={link}>
               <a href="#">
@@ -20,8 +21,11 @@ export default function Footer() {
             </li>
           ))}
         </ul>
+        </nav>
       </div>
+
       <div>
+      <nav aria-label="Social media">
         <div className="social-icons mt-6 mb-4">
           <a href="#" aria-label="Facebook">
             <img className="" src={facebookIcon} alt="Facebook" />
@@ -37,6 +41,7 @@ export default function Footer() {
           </a>
         </div>
         <p> © 2021 Loopstudios. All rights reserved.</p>
+        </nav>
       </div>{" "}
     </footer>
   );

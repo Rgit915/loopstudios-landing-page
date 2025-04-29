@@ -21,7 +21,7 @@ export default function InteractiveSection() {
         alt="man wearing VR"
       />
       <article className="md:absolute md:bottom-0 md:right-[-18%] top-[40%] bg-white md:p-2 md:max-w-2/3">
-        <h2 className="md:text-left md:px-8 md:py-2">
+        <h2 id="interactive-heading" className="md:text-left md:px-8 md:py-2">
           The leader in interactive VR
         </h2>
         <p className="text-[15px] leading-6  text-center font-alata font-normal text-black opacity-50 px-8 md:text-left md:px-4">

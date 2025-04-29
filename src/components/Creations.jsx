@@ -7,7 +7,7 @@ export default function Creations() {
       aria-labelledby="creations-heading"
     >
       <div className="hidden w-full md:flex md:justify-between md:items-center">
-        <h2>Our creations</h2>
+        <h2 id="creations-heading">Our creations</h2>
         <button className="btn"> See all </button>
       </div>
       <h2 className="md:hidden">Our creations</h2>

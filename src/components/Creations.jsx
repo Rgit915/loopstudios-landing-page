@@ -2,7 +2,10 @@ import CreationCard from "./CreationCard";
 import creationsData from "../data/creationsData";
 export default function Creations() {
   return (
-    <section className="image-grid-container">
+    <section
+      className="image-grid-container"
+      aria-labelledby="creations-heading"
+    >
       <div className="hidden w-full md:flex md:justify-between md:items-center">
         <h2>Our creations</h2>
         <button className="btn"> See all </button>
